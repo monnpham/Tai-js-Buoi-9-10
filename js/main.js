@@ -135,8 +135,7 @@ function updateStaff(st) {
             if (arrStaff.length > 0) {
                 if (!validateAccountExit(newUpdate.taikhoan, arrStaff)) {
                     check = false
-                    arrStaff[st].taikhoan = newUpdate.taikhoan
-                    break
+                    arrStaff[st].taikhoan = savetk
                 } else {
                     arrStaff[st].taikhoan = savetk
                 }
