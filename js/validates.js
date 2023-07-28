@@ -1,5 +1,4 @@
 function validateAccount(account) {
-
     // Check if the account is empty
     if (account === "") {
         alert("Vui lòng nhập tài khoản.");
@@ -17,9 +16,9 @@ function validateAccount(account) {
         alert("Tài khoản chỉ được chứa các chữ số.");
         return false;
     }
-
     return true;
 }
+
 function validateEmployeeName(name) {
     // Check if the name is empty
     if (name === "") {
@@ -111,14 +110,21 @@ function validateSalary(salary) {
         return false;
     }
     if (salary < 1000000 || salary > 20000000) {
-        alert("Vui lòng nhập trong khoảng 1 000 000 - 20 000 000.");
+        alert("Vui lòng nhập lương trong khoảng 1 000 000 - 20 000 000.");
         return false;
     }
     return true
 }
 
-function consNV(consoleNV) {
-    consoleNV += "<tr>"
-    consoleNV += "<th>" + Nhanvien.taikhoan + "</th>" + "<th>" + Nhanvien.ten + "</th>" + "</th>" + "<th>" + Nhanvien.email + "</th>" + "</th>" + "<th>" + Nhanvien.ngaylam + "</th>" + "</th>" + "<th>" + Nhanvien.chucvu + "</th>" + "</th>" + "<th>" + Nhanvien.tongluong + "</th>" + "</th>" + "<th>" + Nhanvien.loainv + "</th>"
-    return consoleNV
+// check account exit
+function validateAccountExit(acc, arrSt) {
+    var nv = new Nhanvien()
+    for (var i = 0; i < arrSt.length; i++) {
+        nv = arrSt[i]
+        if (nv.taikhoan === acc && nv.taikhoan != "") {
+            alert("Tài khoản đã tồn tại.")
+            return false
+        }
+    }
+    return true
 }

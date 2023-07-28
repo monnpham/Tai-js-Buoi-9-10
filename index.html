@@ -124,8 +124,13 @@
 						<div class="row mb-3">
 							<div class="col">
 								<div class="input-group">
-									<input type="text" class="form-control" placeholder="Loại nhân viên"
-										id="searchName">
+									<select type="text" class="form-control" id="searchName">
+										<option>Loại nhân viên</option>
+										<option>Trung Bình</option>
+										<option>Khá</option>
+										<option>Giỏi</option>
+										<option>Xuất Sắc</option>
+									</select>
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="btnTimNV"><i class="fa fa-search"></i></span>
 									</div>
@@ -176,7 +181,7 @@
 			<div class="modal-content">
 
 				<header class="head-form mb-0">
-					<h2 id="header-title">Log In</h2>
+					<h2 id="header-title">Log In , Update</h2>
 				</header>
 
 				<!-- Modal Header -->
@@ -299,6 +304,7 @@
 		</div>
 	</div>
 
+
 	<!-- Bootstrap -->
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
@@ -318,8 +324,8 @@
 
 	<!-- <script src="js/modal.js"></script> -->
 	<script src="js/main.js"></script>
+	<script src="js/staff.js"></script>
 	<script src="js/validates.js"></script>
-
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$('#sidebarCollapse').on('click', function () {
