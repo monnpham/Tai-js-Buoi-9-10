@@ -128,3 +128,4 @@ function validateAccountExit(acc, arrSt) {
     }
     return true
 }
+

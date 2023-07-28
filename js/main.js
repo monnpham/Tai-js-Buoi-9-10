@@ -1,7 +1,6 @@
 
 var arrStaff = []
 var arr
-
 // Kiểm tra xem key đã tồn tại trong LocalStorage hay chưa
 if (localStorage.getItem("Staff") == null)
     localStorage.setItem("Staff", "");
@@ -35,7 +34,6 @@ document.querySelector('#btnTimNV').onclick = function () {
             }
 
         }
-        console.log(nv)
         document.querySelector("#tableDanhSach").innerHTML = renderTableNV(nv)
     }
 
@@ -43,10 +41,10 @@ document.querySelector('#btnTimNV').onclick = function () {
 
 
 document.querySelector('#btnThemNV').onclick = function () {
-
+    btnThemNV.style.display = 'block';
+    inputID.disabled = false;
     var st = new Nhanvien()
     var check = true
-
     do {
         st.taikhoan = document.querySelector('#tknv').value
         if (arrStaff.length > 0) {
@@ -136,6 +134,7 @@ function updateStaff(st) {
                 if (!validateAccountExit(newUpdate.taikhoan, arrStaff)) {
                     check = false
                     arrStaff[st].taikhoan = savetk
+                    break
                 } else {
                     arrStaff[st].taikhoan = savetk
                 }
