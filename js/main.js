@@ -42,7 +42,7 @@ document.querySelector('#btnTimNV').onclick = function () {
 
 document.querySelector('#btnThemNV').onclick = function () {
     btnThemNV.style.display = 'block';
-    inputID.disabled = false;
+
     var st = new Nhanvien()
     var check = true
     do {
